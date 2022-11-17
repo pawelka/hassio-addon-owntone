@@ -1,4 +1,4 @@
-FROM linuxserver/daapd:28.2.20211118
+FROM linuxserver/daapd:28.5.20221103
 
 ARG BUILD_ARCH
 
