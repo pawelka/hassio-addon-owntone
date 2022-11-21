@@ -19,7 +19,8 @@ RUN sed -i -e s#"ipv6 = yes"#"ipv6 = no"#g /etc/owntone.conf.orig \
     && sed -i "s/\(control_port =\).*/\1 3690/" /etc/owntone.conf.orig \
     && sed -i "s/\(timing_port =\).*/\1 3691/" /etc/owntone.conf.orig \
     && sed -i "/type\ =/ s/#/ /" /etc/owntone.conf.orig \
-    && sed -i 's/\(type =\).*/\1 "pulseaudio"/' /etc/owntone.conf.orig
+    && sed -i 's/\(type =\).*/\1 "pulseaudio"/' /etc/owntone.conf.orig \
+    && rm -rf /etc/services.d/avahi
 
 ADD 90-homeassistant /etc/cont-init.d/90-homeassistant
 
